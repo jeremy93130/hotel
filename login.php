@@ -1,7 +1,7 @@
 <?php include_once "./inc/header.php" ?>
 
 <div class="container">
-    <form action="./model/connexion.php" method="post">
+    <form action="../hotel/models/connexion.php" method="post">
 
         <div class="form-group">
             <label for="email">Email :</label>

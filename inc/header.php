@@ -15,14 +15,14 @@
 <body>
     <!-- Ici la navBar -->
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex">
             <a class="navbar-brand" href="http://localhost/hotel/">DELUXE HOTEL</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse d-flex" id="navbarText">
+                <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end d-flex w-100">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="http://localhost/hotel/login.php">Log in</a>
                     </li>
