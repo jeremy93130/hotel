@@ -18,3 +18,11 @@ form {
     width: 150px;
     padding: 0;
 }
+
+.img_room{
+    height: 200px;
+}
+
+.img_room img {
+    height: 100%;
+}

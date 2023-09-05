@@ -1,4 +1,6 @@
-<?php include_once "./inc/header.php" ?>
+<?php include_once "./inc/header.php";
+
+session_start();?>
 
 <div class="container">
     <form action="../hotel/models/connexion.php" method="post">

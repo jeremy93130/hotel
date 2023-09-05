@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once("../inc/database.php");
 
 if (isset($_POST['submit'])) {

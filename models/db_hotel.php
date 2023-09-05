@@ -1,4 +1,5 @@
 <?php require_once("../inc/database.php");
+session_start();
 
 if (isset($_POST["add_hotel"])) {
     // Récupération des infos :

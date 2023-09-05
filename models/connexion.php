@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once("../inc/database.php");
 
 if (isset($_POST["submit"])) {
@@ -30,9 +30,13 @@ if (isset($_POST["submit"])) {
         } else {
             if (password_verify($password, $userInfo["password"])) {
                 if ($userInfo["role"] == "admin") {
-                    header("Location : admin/admin.php");
+                    // définir la superglobale $_SESSION role :
+                    header("Location: http://localhost/hotel/admin/admin.php");
+                    $_SESSION["role"] = $userInfo["role"];
                 } else {
-                    header("Location : ../user_home.php");
+                    header("Location: http://localhost/hotel/user_home.php");
+                    $_SESSION["role"] = $userInfo["role"];
+                    $_SESSION['id_user'] = $userInfo['id_user'];
                 }
             } else {
                 echo "Mot de passe inconnu";

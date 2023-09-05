@@ -1,5 +1,4 @@
-<?php require_once("../inc/database.php");
-
+<?php require_once $_SERVER["DOCUMENT_ROOT"] . "/hotel/inc/database.php";
 
 
 function hotelList()
@@ -19,6 +18,25 @@ function hotelList()
         $error->getMessage();
     }
 
+}
+
+
+function roomList()
+{
+    // Se connecter à la base de données : 
+    $db = dbConnexion();
+
+    // Préparer la requête :
+    $request = $db->prepare("SELECT * FROM rooms");
+
+    // Executer la requête :
+    try {
+        $request->execute();
+        // Récuperer le résultat de la requête et la convertir en tableau :
+        return $roomList = $request->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $error) {
+        $error->getMessage();
+    }
 }
 
 ?>

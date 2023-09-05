@@ -1,4 +1,5 @@
 <?php require_once("../inc/database.php");
+session_start();
 
 if (isset($_POST["add_room"])) {
     $hotel = htmlspecialchars($_POST["hotel"]);
