@@ -39,4 +39,22 @@ function roomList()
     }
 }
 
+function bookList($idUser)
+{
+    // Se connecter à la base de données : 
+    $db = dbConnexion();
+
+    // Préparer la requête :
+    $request = $db->prepare("SELECT * FROM bookings WHERE user_id= ? AND booking_state = ?");
+
+    // Executer la requête :
+    try {
+        $request->execute(array($idUser, "in progress"));
+        // Récuperer le résultat de la requête et la convertir en tableau :
+        return $bookList = $request->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $error) {
+        $error->getMessage();
+    }
+}
+
 ?>
